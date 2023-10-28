@@ -6,14 +6,14 @@ import { fetchMovie } from "services/movies-api";
 
 const MoviesPage = () => {
   const [movies, setMovie] = useState([]);
-  const [params,] = useSearchParams();
+  const [params] = useSearchParams();
   const query = params.get('query');
 
   useEffect(() => {
     if (!query) {
       return;
     }
-    
+
     const getMovie = async () => {
       const data = await fetchMovie(query);
       setMovie(data.results);

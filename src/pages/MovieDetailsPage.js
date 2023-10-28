@@ -1,11 +1,12 @@
 import { MovieInfo } from "components/MovieInfo/MovieInfo";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
 import { fetchMovieDetails } from "services/movies-api";
 
 const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
+  const location = useLocation();
   
   useEffect(() => {
     const getDetails = async () => {
@@ -18,7 +19,20 @@ const MovieDetailsPage = () => {
   
 
   return (
-    <>{movie && <MovieInfo movie={movie}/>}</>
+    <>
+    <NavLink to={location.state.from}>Back</NavLink>
+    {movie &&
+        <>
+        <MovieInfo movie={movie} />
+        <ul>
+          <li><NavLink to="cast">Cast</NavLink></li>
+          <li><NavLink to="reviews">Reviews</NavLink></li>
+        </ul>
+
+        <Outlet />
+      </>
+    }
+    </>
   )
 }
 

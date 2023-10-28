@@ -8,7 +8,8 @@ export const MovieInput = () => {
   const submitForm = evt => {
     evt.preventDefault();
     const query = evt.target.elements.movie.value;
-    setParams({query})
+    const nextParams = query ? { query } : {};
+    setParams(nextParams);
   }
 
   return (

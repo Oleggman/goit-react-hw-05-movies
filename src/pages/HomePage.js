@@ -8,7 +8,6 @@ const HomePage = () => {
   useEffect(() => {
     const getTrending = async () => {
       const data = await fetchTrending();
-      console.log(data);
       setMovies(data.results);
     }
 
