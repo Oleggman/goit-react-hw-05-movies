@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+    padding: 120px 0 0 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
       Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     color: #212121;
@@ -41,8 +42,12 @@ export const GlobalStyle = createGlobalStyle`
 
   ul {
     padding: 0;
+    list-style: none;
   }
 
+  a {
+    text-decoration: none;
+  }
   /* body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

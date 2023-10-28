@@ -2,9 +2,11 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from 'pages/HomePage';
 import MoviesPage from 'pages/MoviesPage';
 import MovieDetailsPage from 'pages/MovieDetailsPage';
-import { SharedLayout } from "./SharedLayout";
+import { SharedLayout } from "./SharedLayout/SharedLayout";
 import { Reviews } from "./Reviews/Reviews";
 import { Creadits } from "./Creadits/Creadits";
+
+
 
 export const App = () => {
   return (

@@ -20,7 +20,7 @@ const MovieDetailsPage = () => {
 
   return (
     <>
-    <NavLink to={location.state.from}>Back</NavLink>
+    <NavLink to={location.state?.from ?? '/movies'}>Back</NavLink>
     {movie &&
         <>
         <MovieInfo movie={movie} />
