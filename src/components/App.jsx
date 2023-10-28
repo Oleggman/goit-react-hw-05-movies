@@ -6,8 +6,6 @@ import { SharedLayout } from "./SharedLayout/SharedLayout";
 import { Reviews } from "./Reviews/Reviews";
 import { Creadits } from "./Creadits/Creadits";
 
-
-
 export const App = () => {
   return (
     <Routes>

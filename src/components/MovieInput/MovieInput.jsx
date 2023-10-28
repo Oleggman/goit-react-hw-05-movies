@@ -1,9 +1,7 @@
-import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
 export const MovieInput = () => {
-  const [params, setParams] = useSearchParams();
-  const query = params.get('query') ?? '';
+  const [, setParams] = useSearchParams();
 
   const submitForm = evt => {
     evt.preventDefault();
