@@ -5,16 +5,8 @@ import MovieDetailsPage from 'pages/MovieDetailsPage';
 import { SharedLayout } from "./SharedLayout";
 import { Reviews } from "./Reviews/Reviews";
 import { Creadits } from "./Creadits/Creadits";
-import {
-  fetchMovie,
-  fetchTrending,
-  fetchMovieDetails,
-  fetchMovieCast,
-  fetchMovieReviews
-} from "services/movies-api";
 
 export const App = () => {
-  fetchMovieReviews(1058732);
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
