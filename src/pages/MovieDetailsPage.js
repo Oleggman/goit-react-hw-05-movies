@@ -1,5 +1,5 @@
 import { MovieInfo } from "components/MovieInfo/MovieInfo";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, Suspense } from "react";
 import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
 import { fetchMovieDetails } from "services/movies-api";
 
@@ -7,7 +7,8 @@ const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
-  
+  const backLink = useRef(location.state?.from ?? '/movies');
+
   useEffect(() => {
     const getDetails = async () => {
       const data = await fetchMovieDetails(movieId);
@@ -16,11 +17,10 @@ const MovieDetailsPage = () => {
 
     getDetails();
   }, [movieId])
-  
 
   return (
     <>
-    <NavLink to={location.state?.from ?? '/movies'}>Back</NavLink>
+    <NavLink to={backLink.current}>Back</NavLink>
     {movie &&
         <>
         <MovieInfo movie={movie} />
@@ -29,7 +29,9 @@ const MovieDetailsPage = () => {
           <li><NavLink to="reviews">Reviews</NavLink></li>
         </ul>
 
-        <Outlet />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </>
     }
     </>
