@@ -1,6 +1,6 @@
 import { MovieInfo } from "components/MovieInfo/MovieInfo";
 import { useState, useEffect, useRef, Suspense } from "react";
-import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 import { fetchMovieDetails } from "services/movies-api";
 import { BackLink } from "components/BackLink/BackLink";
 import { AdditionalInfo } from "components/AdditionalInfo/AdditionalInfo";
