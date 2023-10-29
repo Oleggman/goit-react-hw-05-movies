@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Header, Nav, StyledNavLink } from "./SharedLayout.styled";
 import { AiOutlineHome } from 'react-icons/ai';
 import { MdLocalMovies } from 'react-icons/md';
+import { Loader } from "components/Loader/Loader";
 
 export const SharedLayout = () => {
   return (
@@ -15,7 +16,7 @@ export const SharedLayout = () => {
       </Header>
       
       <main>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>

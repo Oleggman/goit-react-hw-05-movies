@@ -5,6 +5,11 @@ padding: 40px 120px;
   display: flex;
   gap: 60px;
   justify-content: space-between;
+  
+  @media screen and (max-width: 875px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;  
 
 export const MovieDetailTitle = styled.h3`

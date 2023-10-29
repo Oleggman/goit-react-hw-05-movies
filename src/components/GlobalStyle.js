@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    position: relative;
     margin: 0;
     padding: 100px 0 0 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
