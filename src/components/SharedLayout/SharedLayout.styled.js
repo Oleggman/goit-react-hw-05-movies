@@ -23,12 +23,15 @@ export const Nav = styled.nav`
 `;
 
 export const StyledNavLink = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   font-size: 36px;
   font-weight: 700;
   color: white;
   transition: color 200ms;
   padding: 5px 10px;
-
   &:hover {
     color: #252A32;
   }

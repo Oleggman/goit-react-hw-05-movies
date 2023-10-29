@@ -3,6 +3,7 @@ import { useState, useEffect, useRef, Suspense } from "react";
 import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
 import { fetchMovieDetails } from "services/movies-api";
 import { BackLink } from "components/BackLink/BackLink";
+import { AdditionalInfo } from "components/AdditionalInfo/AdditionalInfo";
 
 const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
@@ -25,10 +26,7 @@ const MovieDetailsPage = () => {
     {movie &&
         <>
         <MovieInfo movie={movie} />
-        <ul>
-          <li><NavLink to="cast">Cast</NavLink></li>
-          <li><NavLink to="reviews">Reviews</NavLink></li>
-        </ul>
+        <AdditionalInfo />
 
         <Suspense fallback={<div>Loading...</div>}>
           <Outlet />

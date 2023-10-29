@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import { fetchMovieCast } from "services/movies-api";
 import { CreditItem } from "./CreditItem/CreditItem";
+import { CastList, CastItem } from "./Credits.styled";
 
 const Credits = () => {
   const [cast, setCast] = useState([]);
@@ -17,10 +18,10 @@ const Credits = () => {
   }, [movieId])
   
   return (
-    <ul>
+    <CastList>
       {cast.map(actor => 
-        <li key={actor.cast_id}><CreditItem actor={actor} /></li>)}
-    </ul>
+        <CastItem key={actor.cast_id}><CreditItem actor={actor} /></CastItem>)}
+    </CastList>
   )
 }
 
