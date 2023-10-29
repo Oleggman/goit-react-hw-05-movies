@@ -20,11 +20,11 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    padding: 120px 0 0 0;
+    padding: 100px 0 0 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
       Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     color: #212121;
-    background-color: antiquewhite;
+    background-color: #292929;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

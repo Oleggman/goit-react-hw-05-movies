@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchMovieCast } from "services/movies-api";
 import { CreditItem } from "./CreditItem/CreditItem";
 
-const Creadits = () => {
+const Credits = () => {
   const [cast, setCast] = useState([]);
   const { movieId } = useParams();
 
@@ -24,4 +24,4 @@ const Creadits = () => {
   )
 }
 
-export default Creadits;
+export default Credits;

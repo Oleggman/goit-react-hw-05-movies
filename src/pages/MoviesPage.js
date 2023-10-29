@@ -1,5 +1,5 @@
 import { MovieInput } from "components/MovieInput/MovieInput";
-import { TrendingMovies } from "components/TrendingMovies/TrendingMovies";
+import { MoviesList } from "components/MoviesList/MoviesList";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { fetchMovie } from "services/movies-api";
@@ -25,7 +25,7 @@ const MoviesPage = () => {
   return (
     <div>
       <MovieInput />
-      <TrendingMovies movies={movies} />
+      <MoviesList movies={movies} />
     </div>
   )
 }

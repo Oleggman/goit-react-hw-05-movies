@@ -4,6 +4,7 @@ export const MoviesUl = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 28px 36px;
   flex-wrap: wrap;
+  padding: 10px;
 `;

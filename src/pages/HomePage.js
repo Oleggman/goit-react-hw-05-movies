@@ -1,4 +1,4 @@
-import { TrendingMovies } from "components/TrendingMovies/TrendingMovies";
+import { MoviesList } from "components/MoviesList/MoviesList";
 import { useEffect, useState } from "react";
 import { fetchTrending } from "services/movies-api";
 
@@ -16,7 +16,7 @@ const HomePage = () => {
   
 
   return (
-    <TrendingMovies movies={movies} />
+    <MoviesList movies={movies} />
   );
 }
 
