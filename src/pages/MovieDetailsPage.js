@@ -2,6 +2,7 @@ import { MovieInfo } from "components/MovieInfo/MovieInfo";
 import { useState, useEffect, useRef, Suspense } from "react";
 import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
 import { fetchMovieDetails } from "services/movies-api";
+import { BackLink } from "components/BackLink/BackLink";
 
 const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
@@ -20,7 +21,7 @@ const MovieDetailsPage = () => {
 
   return (
     <>
-    <NavLink to={backLink.current}>Back</NavLink>
+    <BackLink backLink={backLink} />
     {movie &&
         <>
         <MovieInfo movie={movie} />

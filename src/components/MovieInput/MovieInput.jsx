@@ -1,4 +1,6 @@
 import { useSearchParams } from "react-router-dom";
+import { BsSearch } from 'react-icons/bs'
+import { SearchForm, Input, SubmitBtn } from "./MovieInput.styled";
 
 export const MovieInput = () => {
   const [, setParams] = useSearchParams();
@@ -11,10 +13,11 @@ export const MovieInput = () => {
   }
 
   return (
-    <form onSubmit={submitForm}>
-      <input name="movie" placeholder="Enter movie name" />
-
-      <button type="submit">Search</button>
-    </form>
+    <SearchForm onSubmit={submitForm}>
+      <SubmitBtn type="submit">
+        <BsSearch />
+      </SubmitBtn>
+      <Input name="movie" placeholder="Enter movie name" />
+    </SearchForm>
   );
 }
